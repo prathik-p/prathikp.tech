@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  width: 100%;
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(45deg, #0d002e, #3e197d);
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
