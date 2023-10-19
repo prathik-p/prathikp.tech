@@ -1,52 +1,23 @@
-import NavBar from "../components/NavBar";
-import SplitType from "split-type";
-import { gsap } from "gsap";
-import { useLayoutEffect, useRef } from "react";
+import Navbar from "../components/Navbar";
 
 function Home() {
-  useLayoutEffect(() => {
-    // gsap.config({ trialWarn: false });
-
-    const myText = new SplitType("#intro2", { types: "chars" });
-
-    gsap.fromTo(
-      myText.chars,
-      {
-        opacity: 0,
-      },
-      {
-        opacity: 1,
-        stagger: 0.05,
-        // ease: 1,
-      }
-    );
-  }, []);
-
   return (
     <>
-      <body>
-        <div className="header">
-          <div className="nav">
-            <NavBar />
-          </div>
+      <div className="header">
+        <div className="nav">
+          <Navbar />
         </div>
-        <div className="content">
-          <div className="intro ">
-            <div className="border-4 rounded-lg border-black p-6 bg-base-100 content-center">
-              <div className="text-center">
-                <div id="intro2">
-                  Hi There!
-                  <br />
-                  I'm Prathik and this is my personal webpage.
-                  <br />
-                  You can find my projects and more here.
-                </div>
-              </div>
-            </div>
-          </div>
+      </div>
+      <div className=" h-[70vh] flex flex-col justify-center   md:h-[70vh] md:flex-row md:justify-start md:items-end ">
+        <div className="w-[100vw] h-[35vh] z-0 bg-bg flex items-center justify-center  md:w-[60vw] md:h-[60vh]">
+          <a className="text-8xl md:text-9xl">Hello</a>
         </div>
-        <div className="footer"></div>
-      </body>
+        <div className="w-[100vw] h-[8vh] z-10 bg-white flex items-center justify-center  md:flex-1 md:h-[13vh]">
+          <a className="text-4xl text-black 2xl:text-6xl lg:text-5xl">
+            I'm Prathik Prejith
+          </a>
+        </div>
+      </div>
     </>
   );
 }
