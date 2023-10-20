@@ -14,13 +14,13 @@
   display: flex;
 }
 
-.content {
+/* .content {
   height: 70vh;
   display: flex;
   justify-content: start;
   align-items: end;
-  /* background-color: gray; */
-}
+  background-color: gray;
+} */
 
 .intro {
   margin: 5vh;
@@ -31,7 +31,7 @@
 }
 
 .footer {
-  height: 10vh;
+  height: 15vh;
 }
 
 .char {
