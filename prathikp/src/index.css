@@ -2,13 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
   margin: 0;
-  height: 100vh;
-  background: linear-gradient(90deg, #000000, #211a2d);
+  height: 100%;
+  background: linear-gradient(90deg, #1a0f2f, #000000, #1a0f2f);
   display: flex;
   flex-direction: column;
   color: #fff;
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
 }

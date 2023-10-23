@@ -14,14 +14,6 @@
   display: flex;
 }
 
-/* .content {
-  height: 70vh;
-  display: flex;
-  justify-content: start;
-  align-items: end;
-  background-color: gray;
-} */
-
 .intro {
   margin: 5vh;
   font-size: x-large;
@@ -34,7 +26,127 @@
   height: 15vh;
 }
 
-.char {
-  /* transform: translateY(115px); */
-  transition: transform 0.5s;
+.hello-box {
+  animation: hello-leftright 1s ease-in forwards;
 }
+
+@keyframes hello-leftright {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.name-box {
+  animation: name-rightleft 1s ease-in forwards;
+}
+
+@keyframes name-rightleft {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 100;
+  }
+}
+
+.triangle2 {
+  width: 0;
+  height: 0;
+  opacity: 0;
+
+  color: #460ced;
+  border-left: 34vh solid transparent;
+  border-right: 34vh solid transparent;
+  border-bottom: 52vh solid;
+
+  position: absolute;
+  left: -5rem;
+  rotate: 90deg;
+  animation: traingle-anim 1s ease-in forwards 0.3s;
+}
+.triangle2-1 {
+  width: 0;
+  height: 0;
+  opacity: 0;
+
+  color: #460ced;
+  border-left: 34vh solid transparent;
+  border-right: 34vh solid transparent;
+  border-bottom: 52vh solid;
+
+  position: absolute;
+  right: -5rem;
+  rotate: -90deg;
+  animation: traingle-anim 1s ease-in forwards 0.3s;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+
+  /* color:  */
+  border-left: 40vh solid transparent;
+  border-right: 40vh solid transparent;
+  border-bottom: 60vh solid;
+
+  position: absolute;
+  left: -5rem;
+  rotate: 90deg;
+  animation: traingle-anim 1s ease-in forwards;
+}
+
+.triangle-1 {
+  width: 0;
+  height: 0;
+
+  border-left: 40vh solid transparent;
+  border-right: 40vh solid transparent;
+  border-bottom: 60vh solid;
+
+  position: absolute;
+  right: -5rem;
+  rotate: -90deg;
+  animation: traingle-anim 1s ease-in forwards;
+}
+
+@keyframes traingle-anim {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* .name {
+  overflow: hidden;
+  border-right: 4px solid transparent;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 1.5s steps(44) 1s 1 normal both,
+    bling-caret 500ms steps(44) infinite normal;
+}
+/*
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 36vw;
+  }
+}
+
+@keyframes blink-caret {
+  from {
+    border-right-color: transparent;
+  }
+  to {
+    border-right-color: #000000;
+  }
+} */
